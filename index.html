@@ -1,8 +1,9 @@
 <html>
 
-  <head>
+<head>
     <title>Coursework Portal</title>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/bd7a1e45c3.js"></script>
     <style type="text/css">
       body {
         background-color: #f0f0f2;
@@ -17,6 +18,16 @@
         background-color: #fff;
         border-radius: 1em;
       }    
+      
+      .unselectable {
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+
+        /* Rules below not implemented in browsers yet */
+        -o-user-select: none;
+        user-select: none;
+      }
       
       a, a:visited {
         text-decoration: none;
@@ -42,93 +53,142 @@
         text-transform: uppercase;
       }
       hr {
-        margin: 0 0 30 0;
+        margin: 0 0 20 0;
       }
       .Section-links table tr td {
         width: 150px;
         font-size: 16px;
       }
+      .SectionDiv {
+        padding: 0;
+        margin: 0;
+        padding-left: 0;
+      }
+      .SectionDiv p {
+        display: none;
+      }
       
     </style>
   </head>
   
-  <body>
-    <div>
-      <h1>Udemy Course Diary</h1>
-      <p>Click below to view pages for each section of the course</p>
-      <p class="Section-links">
-        <table id="NavTable">
-          <tr>
-            <td><a href="#2HTML">Section 2: HTML</a></td>
-            <td><a href="#3CSS">Section 3: CSS3</a></td>
-            <td><a href="#4JavaScript">Section 4: JavaScript</a></td>
-            <td><a href="#5JavaScript">Section 5: JQuery</a></td>
-          </tr>
-          <tr>
-            <td><a href="#6Bootstrap">Section 6: Bootstrap</a></td>
-            <td><a href="#7Wordpress">Section 7: Wordpress</a></td>
-            <td><a href="#8PHP">Section 8: PHP</a></td>
-            <td><a href="#9MySQL">Section 9: MySQL</a></td>
-          </tr>
-          <tr>
-            <td><a href="#10APIs">Section 10: APIs</a></td>
-            <td><a href="#11Mobile">Section 11: Mobile</a></td>
-            <td><a href="#12HTML5CSS3">Section 12: HTML5 CSS3</a></td>
-            <td><a href="#13Python">Section 13: Python</a></td>            
-          </tr>
-          <tr>
-            <td><a href="#14Twitter">Section 14: Twitter Clone</a></td>
-            <td><a href="https://www.udemy.com/the-complete-web-developer-course-2/learn/v4/content">Udemy Course Page</a></td>
-            <td><a href=""></a></td>
-            <td><a href=""></a></td>
-          </tr>
-        </table>
-      </p>
+<body>
+<div>
+<h1>Udemy Course Diary</h1>
+<p>Click below to view pages for each section of the course</p>
+<p>
+  <table id="NavTable">
+    <tr>
+      <td><a href="#2HTML">Section 2: HTML</a></td>
+      <td><a href="#3CSS">Section 3: CSS3</a></td>
+      <td><a href="#4JavaScript">Section 4: JavaScript</a></td>
+      <td><a href="#5JQuery">Section 5: JQuery</a></td>
+    </tr>
+    <tr>
+      <td><a href="#6Bootstrap">Section 6: Bootstrap</a></td>
+      <td><a href="#7Wordpress">Section 7: Wordpress</a></td>
+      <td><a href="#8PHP">Section 8: PHP</a></td>
+      <td><a href="#9MySQL">Section 9: MySQL</a></td>
+    </tr>
+    <tr>
+      <td><a href="#10APIs">Section 10: APIs</a></td>
+      <td><a href="#11Mobile">Section 11: Mobile</a></td>
+      <td><a href="#12HTML5CSS3">Section 12: HTML5 CSS3</a></td>
+      <td><a href="#13Python">Section 13: Python</a></td>            
+    </tr>
+    <tr>
+      <td><a href="#14Twitter">Section 14: Twitter Clone</a></td>
+      <td><a href="https://www.udemy.com/the-complete-web-developer-course-2/learn/v4/content">Udemy Course Page</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr>
+  </table>
+</p>
+<hr>
+
+<div class="SectionDiv">
+  <h3 id="2HTML" class="unselectable">Section 2: HTML <i class="fa fa-plus"></i></h3>
+  <p class="Section-links">
+    <table>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+      <tr><td><br></td></tr>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+    </table>
+  </p>
+  <hr>
+</div>
+  
+<div class="SectionDiv">
+  <h3 id="3CSS"  class="unselectable">Section 3: CSS <i class="fa fa-plus"></i></h3>
+  <p class="Section-links">
+    <table>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+      <tr><td><br></td></tr>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+    </table>
+  </p>
+  <hr>
+</div>
+
+<div class="SectionDiv">
+  <h3 id="4JavaScript"  class="unselectable">Section 4: JavaScript <i class="fa fa-plus"></i></h3>
+  <p class="Section-links">
+    <table>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+      <tr><td><br></td></tr>
+      <tr>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+        <td><a href="">Test Link</a></td>
+      </tr>
+    </table>
+  </p>
+  <hr>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+  $(".SectionDiv h3").on("click", function() {
+    if($(this).parent().children("p").css("display") == "none") {
+      $(this).parent().children("p").css("display","block");
+      $(this).children("i").removeClass();
+      $(this).children("i").addClass("fa");
+      $(this).children("i").addClass("fa-minus");
+    } else {
+      $(this).parent().children("p").css("display","none");
+      $(this).children("i").removeClass();
+      $(this).children("i").addClass("fa");
+      $(this).children("i").addClass("fa-plus");
+    }
     
-      <hr>
-      
-      <h3 id="2HTML">Section 2: HTML</h3>
-      <p class="Section-links">
-        <table>
-          <tr>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-          </tr>
-          <td><td><br></td></td>
-          <tr>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-          </tr>
-        </table>
-      </p>
-      <hr>
-
-      <h3 id="3CSS">Section 3: CSS</h3>
-      <p class="Section-links">
-        <table>
-          <tr>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-          </tr>
-          <td><td><br></td></td>
-          <tr>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-            <td><a href="">Test Link</a></td>
-          </tr>
-        </table>
-      </p>
-      <hr>
-      
-    </div>    
-  </body>
-
-
+  }); //Click toggles  
+</script>
+</body>
 </html>
