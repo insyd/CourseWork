@@ -12,29 +12,121 @@
       }
       div {
         width: 600px;
-        margin: 5em auto;
-        padding: 50px;
+        margin: 2em auto;
+        padding: 25px 50px 25px 50px;
         background-color: #fff;
         border-radius: 1em;
-      }
-      a {
+      }    
+      
+      a, a:visited {
         text-decoration: none;
       }
+      
+      #NavTable tr td {
+        width: 150px;
+      }
+      #NavTable tr td a, #NavTable tr td a:visited  {
+        color: blue;
+        font-size: 12px;
+      }
+      
+      h1 {
+        margin-top: 0;
+        font-size: 28px;
+      }      
+      h3 {
+        margin-top: 0;
+        font-size: 22px;
+      }
+      h1,h2,h3 {
+        text-transform: uppercase;
+      }
+      hr {
+        margin: 0 0 30 0;
+      }
+      .Section-links table tr td {
+        width: 150px;
+        font-size: 16px;
+      }
+      
     </style>
   </head>
   
   <body>
     <div>
-      <h1>Section Links</h1>
+      <h1>Udemy Course Diary</h1>
       <p>Click below to view pages for each section of the course</p>
-      <p><a href="#2HTML">Section 2: HTML</a> | <a href="#3CSS">Section 3: CSS3</a></p>
+      <p class="Section-links">
+        <table id="NavTable">
+          <tr>
+            <td><a href="#2HTML">Section 2: HTML</a></td>
+            <td><a href="#3CSS">Section 3: CSS3</a></td>
+            <td><a href="#4JavaScript">Section 4: JavaScript</a></td>
+            <td><a href="#5JavaScript">Section 5: JQuery</a></td>
+          </tr>
+          <tr>
+            <td><a href="#6Bootstrap">Section 6: Bootstrap</a></td>
+            <td><a href="#7Wordpress">Section 7: Wordpress</a></td>
+            <td><a href="#8PHP">Section 8: PHP</a></td>
+            <td><a href="#9MySQL">Section 9: MySQL</a></td>
+          </tr>
+          <tr>
+            <td><a href="#10APIs">Section 10: APIs</a></td>
+            <td><a href="#11Mobile">Section 11: Mobile</a></td>
+            <td><a href="#12HTML5CSS3">Section 12: HTML5 CSS3</a></td>
+            <td><a href="#13Python">Section 13: Python</a></td>            
+          </tr>
+          <tr>
+            <td><a href="#14Twitter">Section 14: Twitter Clone</a></td>
+            <td><a href="https://www.udemy.com/the-complete-web-developer-course-2/learn/v4/content">Udemy Course Page</a></td>
+            <td><a href=""></a></td>
+            <td><a href=""></a></td>
+          </tr>
+        </table>
+      </p>
+    
       <hr>
+      
       <h3 id="2HTML">Section 2: HTML</h3>
-      <p><a href="#">Test Link</a></p>
+      <p class="Section-links">
+        <table>
+          <tr>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+          </tr>
+          <td><td><br></td></td>
+          <tr>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+          </tr>
+        </table>
+      </p>
       <hr>
+
       <h3 id="3CSS">Section 3: CSS</h3>
-      <p><a href="#">Test Link</a></p>
+      <p class="Section-links">
+        <table>
+          <tr>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+          </tr>
+          <td><td><br></td></td>
+          <tr>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+            <td><a href="">Test Link</a></td>
+          </tr>
+        </table>
+      </p>
       <hr>
+      
     </div>    
   </body>
 
