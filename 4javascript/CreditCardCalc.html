@@ -1,0 +1,142 @@
+<html>
+
+  <head>  
+    <title>Credit Card Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style type="text/css">
+      .inputFormField {
+        width: 100%;
+      }
+      .inputFormSubmit {
+        width: 100%;
+      }
+      #calcForm {
+        margin: 0 auto;
+        border: 1px black dashed;
+        margin-bottom: 20px;
+      }
+      #calcResult {
+        margin: 0 auto;
+        border: 1px black dashed;
+        display: none;
+      }
+      .left {
+        width: 55%;
+      }
+      .right {
+        width: 45%;
+      }
+    </style>   
+  </head>
+
+  <body>
+    <table id="calcForm">
+      <thead>
+        <tr>
+          <th colspan="2">Credit Card Calculator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">Outstanding Balance (£)</td>
+          <td class="right"><input class="inputFormField" id="currentBalance"></td>
+        </tr>
+        <tr>
+          <td class="left">
+            <select id="payFreq">
+              <option>Weekly</option>
+              <option>Fortnightly</option>
+              <option selected>Monthly</option>
+              <option>Quarterly</option>
+            </select> Payment (£)</td>
+          <td class="right"><input class="inputFormField" id="monthlyPayment"></td>
+        </tr>
+        <tr>
+          <td class="left">Annual Interest Rate (%)</td>
+          <td class="right"><input id="APR" class="inputFormField" type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input class="inputFormSubmit" id="formCalculate" type="button" value="Calculate"></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <table id="calcResult">
+      <thead>
+        <tr>
+          <th colspan="2">Results</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">Total Paid</td>
+          <td class="right" id="totalPay"></td>
+        </tr>
+        <tr>
+          <td class="left">Interest Paid</td>
+          <td class="right" id="interestPaid"></td>
+        </tr>
+        <tr>
+          <td class="left">Time to Pay</td>
+          <td class="right" id="timetoPay"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  <script type="text/javascript">
+    function pays($bal, $pay, $tapr) {
+      $bal = parseFloat($bal);
+      var $init = $bal;
+      $pay = parseFloat($pay);
+      $tapr = parseFloat($tapr);
+      var $months = 0, $total = 0, $paid = 0;
+      var $int = 0, $prin = 0;
+      while ($bal > 0) {
+        $months++;
+        $int += ($pay * ($tapr/12));
+        $prin = $pay - ($pay*($tapr/12));
+        $bal -= $prin;
+      }
+      return [$months,$int];
+    }
+
+    $("#formCalculate").on("click", function () {
+
+      var $curBal = $("#currentBalance").val();
+      var $payAmt = $("#monthlyPayment").val();
+      var $apr = ($("#APR").val() / 100);
+      var $payPer = $("#payFreq").val();
+      var $multiplier = 0;
+
+      switch($payPer) {
+        case 'Weekly':
+          $multiplier = 0.25;
+          break;
+        case 'Fortnightly':
+          $multiplier = 0.5;
+          break;
+        case 'Monthly':
+          $multiplier = 1;
+          break;
+        case 'Quarterly':
+          $multiplier = 3;
+          break;
+      }
+
+      alert("Test");
+
+      var $temp = pays($curBal, $payAmt, $apr);
+
+      var $payDura = $temp[0];
+      var $totalPaid = $temp[1];
+
+      $("#totalPay").html("£" + $totalPaid);
+      $("#interestPaid").html("£");
+      $("#timetoPay").html($payDura * $multiplier + " payments " + $payPer);
+      $("#calcResult").css("width", $("#calcForm").width());
+      $("#calcResult").css("display", "table");
+    });
+  </script>
+  </body>
+  
+</html>
