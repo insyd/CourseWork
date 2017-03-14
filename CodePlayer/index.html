@@ -96,19 +96,6 @@
         $("#html,#css,#js,#output").css("width",(100/tabsActive)+"%");
       });
       
-      $(".headBtn").mouseover(function() {
-        $(this).css("background-color","white");
-      });
-      $(".headBtn").mouseout(function() {
-        $(this).css("background-color","#dddddd");
-      });
-      $(".headBtn").mousedown(function() {
-        $(this).css("background-color","#aaaaaa");
-      });
-      $(".headBtn").mouseup(function() {
-        $(this).css("background-color","white");
-      });
-      
       $("#html > textarea").keyup(function () {
         $("#outputDiv").html($("#html > textarea").val());
       });
