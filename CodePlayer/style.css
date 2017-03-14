@@ -1,0 +1,47 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: helvetica sans-serif;
+}
+.clear-float {
+  clear: both;
+}
+#headWrapper {
+  width: 100%;
+  background-color: dimgray;
+  height: 6%;
+  min-height: 40px;
+}
+#headBar {
+  width: 500px;
+  margin: 0 auto;
+}
+.headBtn {
+  padding: 0;
+  margin: 10px 0 0 0;
+  width: 122px;
+  height: 60%;
+  border-radius: 15px;
+  border: 1px solid lime;
+}
+.panel {
+  width: 25%;
+  height: 75%;
+  min-height: 400px;
+  float: left;
+}
+.panelHead {
+  height: 4%;
+  min-height: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.panel textarea {
+  width: 100%;
+  resize: none;
+  height: 120%;
+}
+#outputDiv {
+  padding: 5px;
+}

@@ -1,0 +1,124 @@
+<html>
+
+  <head>
+    <title>Code Player Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <style id="dynamicStyle">
+    </style>
+  </head>
+  
+  <body>
+    <div id="headWrapper">
+    <div id="headBar">
+      <button id="htmlToggle" class="headBtn">HTML</button>
+      <button id="cssToggle" class="headBtn">CSS</button>
+      <button id="jsToggle" class="headBtn">JS</button>
+      <button id="outputToggle" class="headBtn">OUTPUT</button>
+    </div>
+    </div>
+    
+    <div class="panel" id="html">
+      <div class="panelHead">HTML</div>
+      <textarea type="text" class="content"></textarea>
+    </div>
+    
+    <div class="panel" id="css">
+      <div class="panelHead">CSS</div>
+      <textarea type="text" class="content"></textarea>
+    </div>
+    
+    <div class="panel" id="js">
+      <div class="panelHead">Javascript</div>
+      <textarea type="text" class="content"></textarea>
+    </div>
+    
+    <div class="panel" id="output">
+      <div class="panelHead">Output</div>
+      <div id="outputDiv">
+      </div>
+    </div>
+    
+    <div class="clear-float"></div>
+    
+    <script type="text/javascript">
+      var tabsActive = 4;
+      
+      $("#htmlToggle").click(function(){
+        if($("#html").css("display")=="none") {
+          $("#html").css("display","inline");
+          $(this).css("border-color","lime");
+          tabsActive++;
+        } else {
+          $("#html").css("display","none");
+          $(this).css("border-color","red");
+          tabsActive--;
+        }
+        $("#html,#css,#js,#output").css("width",(100/tabsActive)+"%");
+      });
+      
+      $("#cssToggle").click(function(){
+        if($("#css").css("display")=="none") {
+          $("#css").css("display","inline");
+          $(this).css("border-color","lime");
+          tabsActive++;
+        } else {
+          $("#css").css("display","none");
+          $(this).css("border-color","red");
+          tabsActive--;
+        }
+        $("#html,#css,#js,#output").css("width",(100/tabsActive)+"%");
+      });
+      $("#jsToggle").click(function(){
+        if($("#js").css("display")=="none") {
+          $("#js").css("display","inline");
+          $(this).css("border-color","lime");
+          tabsActive++;
+        } else {
+          $("#js").css("display","none");
+          $(this).css("border-color","red");
+          tabsActive--;
+        }
+        $("#html,#css,#js,#output").css("width",(100/tabsActive)+"%");
+      });
+      $("#outputToggle").click(function(){
+        if($("#output").css("display")=="none") {
+          $("#output").css("display","inline");
+          $(this).css("border-color","lime");
+          tabsActive++;
+        } else {
+          $("#output").css("display","none");
+          $(this).css("border-color","red");
+          tabsActive--;
+        }
+        $("#html,#css,#js,#output").css("width",(100/tabsActive)+"%");
+      });
+      
+      $(".headBtn").mouseover(function() {
+        $(this).css("background-color","white");
+      });
+      $(".headBtn").mouseout(function() {
+        $(this).css("background-color","#dddddd");
+      });
+      $(".headBtn").mousedown(function() {
+        $(this).css("background-color","#aaaaaa");
+      });
+      $(".headBtn").mouseup(function() {
+        $(this).css("background-color","white");
+      });
+      
+      $("#html > textarea").keyup(function () {
+        $("#outputDiv").html($("#html > textarea").val());
+      });
+      $("#css > textarea").keyup(function () {
+        $("#dynamicStyle").html($("#css > textarea").val());
+      });
+      
+    </script>
+    
+  </body>
+  
+
+</html>
